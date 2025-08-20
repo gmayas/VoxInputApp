@@ -27,9 +27,15 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/css/app.css",
+              "src/css/darkly.bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -92,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4ae63f11-76da-4425-b2a9-2568b6d8a07b"
   }
 }
