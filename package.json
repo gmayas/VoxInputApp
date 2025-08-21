@@ -6,6 +6,7 @@
     "start": "ng serve",
     "dev": "ng serve --open",
     "build": "ng build",
+    "deploy": "ng build --aot && firebase deploy",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
