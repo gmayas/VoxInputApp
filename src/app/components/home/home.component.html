@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Vox Input App.</title>
 </head>
 
 <body>
-  
     <div class="voxContainer">
         <div class="card border-primary mb-3" style="max-width: 30rem;">
             <div class="card-header">
@@ -23,7 +21,7 @@
                     <h5 class="text-center">¿Cómo prefieres que te llamemos?</h5>
                     <div class="input-group">
                         <input type="text" class="form-control" id="inputMsg" placeholder="Introduce tu nombre.">
-                        <button class="input-group-text btn btn-primary" id="recordButton">
+                        <button class="input-group-text btn btn-primary" id="recordButton" (click)="startRecognition()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-mic" viewBox="0 0 16 16">
                                 <path
@@ -34,7 +32,7 @@
                                 </path>
                             </svg>
                         </button>
-                        <button class="input-group-text btn btn-danger" id="sendButton">
+                        <button class="input-group-text btn btn-danger" id="sendButton" (click)="sendMessage()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-play" viewBox="0 0 16 16">
                                 <path
