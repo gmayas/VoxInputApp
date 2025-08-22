@@ -1,27 +1,34 @@
 # VoxInputApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+Este proyecto fue creado con Angular CLI versión 18.2.6., al momento de descargar este proyecto, instale las dependencias con npm install, para ejecutar npm run dev, la aplicación corre en: http://localhost:4200/. La aplicación se recargará automáticamente si cambia alguno de los archivos de origen.
 
-## Development server
+## VoxInputApp
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+VoxInputApp fue creado como proyecto de prueba para la vacante como Desarrollador dentro de empresa dedicada a otorgar créditos a sus clientes, es una aplicación en base a un mensaje de voz, transcribe, valida y envía a una Base de datos Mongo Atlas a treves de una AiRest.
 
-## Code scaffolding
+![](/imagenes/01.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Funcionamiento:
 
-## Build
+De click en el botón “iniciar reconocimiento de voz”, acepte uso de micrófono en su navegador y hable, al momento de dar una pausa, de manera inmediata verá su mensaje escrito y validado.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![](/imagenes/01C.png)
 
-## Running unit tests
+De click en validar y enviar mensaje, si cumple con las validaciones su mensaje se enviará y se guardará en la Base de datos.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![](/imagenes/01D.png)
 
-## Running end-to-end tests
+Mensaje codificado y guardado en la base de datos.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![](/imagenes/01E.png)
 
-## Further help
+Si deseas ver el código de su Api Rest, solo da click en la siguiente url:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+https://github.com/gmayas/MsgApi
+
+Si deseas ver la aplicación en producción, solo da click en la siguiente url:
+
+https://voxinputapp.web.app/
+
+`© 2025 Copyright: GMayaS C:\>_Desarrollo en Sistemas.`
+
