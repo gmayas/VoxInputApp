@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SpeechRecognitionService } from '../../services/speech-recognition.service';
+import { MessagesService } from '../../services/messages.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ export class HomeComponent {
   inputMsg: HTMLElement | null = null;
   inputHelp: HTMLElement | null = null;
 
-  constructor(public speech: SpeechRecognitionService) {
+  constructor(public speech: SpeechRecognitionService, private messagesService: MessagesService) {
     this.speech.init();
   }
 
@@ -30,10 +31,13 @@ export class HomeComponent {
     console.log('Botón de grabación presionado'); // Mensaje de depuración
   }
 
-  sendMessage(): void {
+  async sendMessage() {
     const inputMsg = document.getElementById('inputMsg') as HTMLInputElement;
     if (this.speech.validateTranscrip(inputMsg.value)) {
       console.log('Mensaje enviado:', inputMsg.value); // Mensaje de depuración
+      let resMsg = await this.messagesService.sendMessage(inputMsg.value);
+      let dataRes = await resMsg.json()
+      console.log('Respuesta del servidor:', dataRes); // Mostrar la respuesta del servidor
       this.speech.readTranscript("mensaje enviado"); // Leer el mensaje enviado
     } else {
       console.error('Mensaje no válido'); // Mensaje de error
